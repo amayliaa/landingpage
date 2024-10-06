@@ -1,27 +1,99 @@
-<html>
- <head>
-  <title>HeartPen</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
-  <style>
-   body {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartPen</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <img alt="Logo" height="30" src="https://static.vecteezy.com/system/resources/previews/002/496/921/original/love-writing-logo-concept-love-heart-icon-with-pen-nib-icon-illustration-design-vector.jpg" width="30"/>
+                <span>HEARTPEN</span>
+            </div>
+            <nav class="nav">
+                <a class="active" href="#">Home</a>
+                <a href="#">How It Works</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="social-login">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="auth-buttons">
+                    <a class="signup-button" href="#">Sign Up</a>
+                    <a class="login-button" href="#">Login</a>
+                </div>
+            </div>
+        </header>
+    
+        <hr>
+    
+        <main class="main-content">
+            <div class="text-content">
+                <h1>The App That Makes Writing Fun!</h1>
+                <p>Experience the joy of creative writing with our app</p>
+                <div class="app-buttons">
+                    <a href="https://apps.apple.com/us/app/app.id" target="_blank"><img alt="Download on the App Store button" src="img/AS.png"/></a>
+                    <a href="https://play.google.com/store/apps/details?id=app.id" target="_blank"><img alt="Get it on Google Play button" src="img/PS.png"/></a>
+                </div>
+            </div>
+            <div class="image-content">
+                <img alt="Foto buku" src="img/2810820-removebg-preview.png"/>
+            </div>
+        </main>
+    
+        <section class="features-container">
+            <div class="feature">
+                <img src="https://png.pngtree.com/png-clipart/20230929/original/pngtree-student-writing-an-essay-icon-cartoon-illustration-vector-png-image_13011837.png" alt="Write">
+                <h3>Write</h3>
+                <p>pour your thoughts into writing</p>
+            </div>
+            <div class="feature">
+                <img src="https://png.pngtree.com/png-vector/20231014/ourmid/pngtree-illustration-student-reading-a-book-png-image_10159476.png" alt="Read">
+                <h3>Read</h3>
+                <p>explore and read about other people's feelings</p>
+            </div>
+            <div class="feature">
+                <img src="https://cdn-icons-png.flaticon.com/512/5521/5521293.png" alt="Easy to Use">
+                <h3>Tutors</h3>
+                <p>find your tutors or mentors here</p>
+            </div>
+        </section>
+    
+        <footer class="footer">
+            <p>&copy; 2024 HeartPen. All rights reserved.</p>
+        </footer>
+    </body>
+    
+    <style>
+        body {
             margin: 0;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            background-color: #ffffff;
+            background-color: #f3f4f6;
         }
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 50px;
+            background-color: #3f51b5; /* Warna biru tua untuk header */
+            color: #fff;
+            flex-wrap: wrap; /* Memungkinkan elemen header untuk membungkus */
         }
         .logo {
             display: flex;
             align-items: center;
+            margin-bottom: 10px; /* Menambahkan jarak bawah untuk mobile */
         }
         .logo img {
             height: 30px;
             margin-right: 10px;
+            border-radius: 50%;
+            border: 2px solid #fff;
         }
         .logo span {
             font-size: 24px;
@@ -30,108 +102,217 @@
         .nav {
             display: flex;
             gap: 30px;
+            flex-wrap: wrap; /* Memungkinkan navigasi untuk membungkus pada mobile */
         }
         .nav a {
             text-decoration: none;
-            color: #000000;
+            color: #fff;
             font-size: 16px;
+            transition: color 0.3s ease;
         }
         .nav a.active {
-            color: #ff7f7f;
+            color: #333;
+        }
+        .nav a:hover {
+            color: #333;
+            transform: scale(1.1);
+        }
+        .social-login {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap; /* Memungkinkan social login untuk membungkus pada mobile */
         }
         .social-icons {
             display: flex;
             gap: 15px;
         }
         .social-icons a {
-            color: #000000;
+            color: #fff;
             font-size: 18px;
+            transition: color 0.3s ease;
         }
+        .social-icons a:hover {
+            color: #333;
+        }
+
+        /* Style untuk tombol login dan sign up */
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap; /* Memungkinkan tombol untuk membungkus pada mobile */
+        }
+        .login-button, .signup-button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .login-button {
+            background-color: #fff;
+            color: #3f51b5; /* Sesuaikan dengan warna header */
+            border: 2px solid #fff;
+        }
+        .login-button:hover {
+            background-color: #3f51b5;
+            color: #fff;
+            border-color: #fff;
+        }
+        .signup-button {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+        .signup-button:hover {
+            background-color: #fff;
+            color: #3f51b5; /* Sesuaikan dengan warna header */
+        }
+
+        /* Pembatas */
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #3f51b5; /* Warna pembatas sesuai header */
+            margin: 0;
+        }
+
+        /* Main content */
         .main-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 50px;
+            flex-wrap: wrap;
         }
         .text-content {
             max-width: 50%;
+            flex-basis: 100%;
+            text-align: center;
         }
         .text-content h1 {
-            font-size: 48px;
+            font-size: 36px;
             font-weight: 700;
             margin: 0;
         }
         .text-content p {
-            font-size: 24px;
+            font-size: 18px;
             margin: 20px 0;
         }
         .app-buttons {
             display: flex;
             gap: 20px;
+            justify-content: left;
         }
         .app-buttons img {
             height: 50px;
+            width: auto;
         }
-        .image-content img {
+        .image-content {
             max-width: 100%;
+            text-align: center;
+            flex-basis: 100%;
         }
-  </style>
- </head>
- <body>
-  <header class="header">
-   <div class="logo">
-    <img alt="Logo" height="30" src="" width="30"/>
-    <span>
-     HEARTPEN
-    </span>
-   </div>
-   <nav class="nav">
-    <a class="active" href="#">
-     Home
-    </a>
-    <a href="#">
-     How It Works
-    </a>
-    <a href="#">
-     Sign Up
-    </a>
-    <a href="#">
-     Login
-    </a>
-    <a href="#">
-     Contact
-    </a>
-   </nav>
-   <div class="social-icons">
-    <a href="#">
-     <i class="fab fa-facebook-f">
-     </i>
-    </a>
-    <a href="#">
-     <i class="fab fa-instagram">
-     </i>
-    </a>
-    <a href="#">
-     <i class="fab fa-youtube">
-     </i>
-    </a>
-   </div>
-  </header>
-  <main class="main-content">
-   <div class="text-content">
-    <h1>
-     The App That Makes Writing Fun!
-    </h1>
-    <div class="app-buttons">
-     <a href="#">
-      <img alt="Download on the App Store button" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxzXhxvY5kBIuT7susVa22FenQ9WjhTluzKw&s" height="100" width="100"/>
-     <a href="#">
-      <img alt="Get it on Google Play button" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBfjEmlKDJhC272StWW3xSm9Ys7T3cbOVvAw&s" height="100" width="100"/>
-    </div>
-   </div>
-   <div class="image-content">
-    <img alt="Illustration of a large letter A" height="500" src="https://cdn-icons-png.flaticon.com/256/4552/4552937.png" width="500"/>
-   </div>
-  </main>
- </body>
+        /* Features section */
+        .features-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+            gap: 20px;
+        }
+        .feature {
+            text-align: center;
+            background-color: #fff5e6;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            width: 100%;
+            max-width: 200px;
+        }
+        .feature:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+        .feature img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+        .feature h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .feature p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Background */
+        body {
+            background-image: url('https://img.freepik.com/free-vector/gradient-blur-pink-blue-abstract-background_53876-117324.jpg');
+            background-size: cover;
+            background-repeat: repeat;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #3f51b5; /* Warna biru tua untuk footer */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Responsive design */
+        @media (min-width: 768px) {
+            .text-content h1 {
+                font-size: 48px;
+            }
+            .text-content p {
+                font-size: 24px;
+            }
+            .text-content {
+                max-width: 50%;
+                text-align: left;
+            }
+            .image-content {
+                flex-basis: 50%;
+            }
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px; /* Padding lebih kecil di mobile */
+            }
+            .nav {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 20px;
+            }
+            .text-content {
+                max-width: 90%; /* Lebar konten teks lebih lebar di mobile */
+                margin: 0 auto; /* Center konten teks */
+            }
+            .main-content {
+                padding: 20px; /* Padding lebih kecil di mobile */
+            }
+            .image-content {
+                flex-basis: 100%;
+            }
+            .app-buttons {
+                justify-content: center; /* Center tombol di mobile */
+            }
+        }
+    </style>
+</head>
+
 </html>
